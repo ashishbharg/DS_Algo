@@ -3,6 +3,10 @@ package edu.ashish.linkedlist;
 import edu.ashish.model.ListSinglePointerNode;
 import edu.ashish.util.DSCreationUtil;
 
+/**
+ * Program to insert in sorted linked list
+ */
+
 public class InsertInSortedLL {
 
     public static void main(String[] args) {

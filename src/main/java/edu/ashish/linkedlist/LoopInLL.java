@@ -3,6 +3,11 @@ package edu.ashish.linkedlist;
 import edu.ashish.model.ListSinglePointerNode;
 import edu.ashish.util.DSCreationUtil;
 
+/**
+ * Program to find loop in linked list. If loop exists, find out the starting point of the loop.
+ * Also find out the number of elements in the loop.
+ */
+
 public class LoopInLL {
 
     private static boolean isLoopExist = false;

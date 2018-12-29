@@ -3,6 +3,10 @@ package edu.ashish.circularlinkedlist;
 import edu.ashish.util.DSCreationUtil;
 import edu.ashish.model.ListSinglePointerNode;
 
+/**
+ * Program to delete last node from circular linked list.
+ */
+
 public class DeleteLastNode {
 
     public static void main(String[] args) {

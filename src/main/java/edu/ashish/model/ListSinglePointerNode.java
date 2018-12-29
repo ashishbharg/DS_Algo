@@ -28,7 +28,7 @@ public class ListSinglePointerNode {
 
     public static void printList(ListSinglePointerNode head) {
         ListSinglePointerNode currentNode = head;
-        System.out.println("Printing circular linked list");
+        System.out.println("Printing linked list");
         while(currentNode != null) {
             System.out.print(currentNode.getData());
             if(head != currentNode.getNext() && null != currentNode.getNext()) {

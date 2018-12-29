@@ -3,6 +3,9 @@ package edu.ashish.circularlinkedlist;
 import edu.ashish.model.ListSinglePointerNode;
 import edu.ashish.util.DSCreationUtil;
 
+/**
+ * Program to delete first node from circular linked list.
+ */
 public class DeleteFirstNode {
 
     public static void main(String[] args) {
