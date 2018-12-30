@@ -1,7 +1,6 @@
 package edu.ashish.linkedlist;
 
 import edu.ashish.model.ListSinglePointerNode;
-import edu.ashish.util.DSCreationUtil;
 
 /**
  * Program to find intersection or common point of two linked list where the linked list size can vary.

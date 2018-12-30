@@ -11,7 +11,7 @@ public class InsertInSortedLL {
 
     public static void main(String[] args) {
 
-        ListSinglePointerNode head = DSCreationUtil.createSortedSinglyLinkedList();
+        ListSinglePointerNode head = DSCreationUtil.createSortedSinglyLinkedList(1, 3, 5, 7, 8, 9);
         ListSinglePointerNode.printList(head);
         ListSinglePointerNode newNode = new ListSinglePointerNode(6);
         head = insertInSortedLL(newNode, head);
