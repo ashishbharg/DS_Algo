@@ -20,7 +20,7 @@ public class ReverseSinglyLL {
     private static ListSinglePointerNode reverseLL(ListSinglePointerNode head) {
 
         ListSinglePointerNode newNode = null;
-        ListSinglePointerNode tempNode = null;
+        ListSinglePointerNode tempNode;
 
         while(head != null) {
             tempNode = head;
