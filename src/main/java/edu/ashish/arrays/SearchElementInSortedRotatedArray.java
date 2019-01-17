@@ -3,7 +3,12 @@ package edu.ashish.arrays;
 import edu.ashish.util.PrintingUtil;
 
 /**
- * Program to search a given element in sorted and rotated array.
+ * Program to search a given element in sorted and rotated array. The program handles the problem using
+ * binary search to give optimal solution. It is based on assumption that there are no duplicates. If
+ * array is going to contain duplicates, then need to go for linear search solution and time complexity can
+ * not be better than O(n).
+ *
+ * Time Complexity : O(logN).
  */
 public class SearchElementInSortedRotatedArray {
 
