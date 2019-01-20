@@ -3,6 +3,9 @@ package edu.ashish.tree;
 import edu.ashish.model.TreeNode;
 import edu.ashish.util.DSCreationUtil;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class OrderTraversals {
 
     public static void main(String[] args) {
@@ -24,6 +27,27 @@ public class OrderTraversals {
         System.out.println("Level Order Traversal");
         levelOrder(root);
         System.out.println();
+
+        System.out.println("Level Order Traversal using queue");
+        levelOrderUsingQueue(root);
+        System.out.println();
+    }
+
+    private static void levelOrderUsingQueue(TreeNode root) {
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+            System.out.print(node.getData() + " ");
+            if (node.left != null) {
+                queue.add(node.left);
+            }
+            if (node.right != null) {
+                queue.add(node.right);
+            }
+        }
     }
 
     private static void levelOrder(TreeNode root) {
