@@ -1,6 +1,8 @@
 package edu.ashish.util;
 
 import edu.ashish.model.ListSinglePointerNode;
+import edu.ashish.model.TreeNode;
+import sun.reflect.generics.tree.Tree;
 
 public class DSCreationUtil {
 
@@ -65,5 +67,16 @@ public class DSCreationUtil {
         ListSinglePointerNode node5 = new ListSinglePointerNode(data6);
         node4.setNext(node5);
         return head;
+    }
+
+    public static TreeNode createBinaryTree() {
+
+        TreeNode root = new TreeNode(20);
+        root.left = new TreeNode(10);
+        root.right = new TreeNode(40);
+        root.right.left = new TreeNode(30);
+        root.right.right = new TreeNode(50);
+        root.right.right.right = new TreeNode(60);
+        return root;
     }
 }
