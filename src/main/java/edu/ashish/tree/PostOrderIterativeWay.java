@@ -16,10 +16,44 @@ public class PostOrderIterativeWay {
     public static void main(String[] args) {
 
         TreeNode root = DSCreationUtil.createBinaryTree();
-        postOrderInIterativeWay(root);
+        System.out.println("Post Order Traversal Using 2 Stacks");
+        postOrderInIterativeWayUsingTwoStacks(root);
+        System.out.println();
+        System.out.println("Post Order Traversal Using 1 Stack");
+        postOrderInIterativeWayUsingOneStack(root);
     }
 
-    private static void postOrderInIterativeWay(TreeNode root) {
+    private static void postOrderInIterativeWayUsingOneStack(TreeNode root) {
+
+        if (root == null) {
+            return;
+        }
+        TreeNode current = root;
+        Stack<TreeNode> stack = new Stack<>();
+
+        while (current != null || !stack.empty()) {
+
+            if (current != null) {
+                stack.push(current);
+                current = current.left;
+            } else {
+                TreeNode temp = stack.peek().right;
+                if (temp == null) {
+                    temp = stack.pop();
+                    System.out.print(temp.getData() + " ");
+                    while (!stack.isEmpty() && temp == stack.peek().right) {
+                        temp = stack.pop();
+                        System.out.print(temp.getData() + " ");
+                    }
+                } else {
+                    current = temp;
+                }
+            }
+
+        }
+    }
+
+    private static void postOrderInIterativeWayUsingTwoStacks(TreeNode root) {
 
         Stack<TreeNode> stack1 = new Stack<>();
         Stack<TreeNode> stack2 = new Stack<>();
