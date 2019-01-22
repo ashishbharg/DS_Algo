@@ -27,9 +27,9 @@ public class SearchInBST {
             return null;
         }
 
-        if (root.getData() == key) {
+        if (root.data == key) {
             return root;
-        } else if (key > root.getData()) {
+        } else if (key > root.data) {
             return searchInBST(root.right, key);
         } else {
             return searchInBST(root.left, key);
