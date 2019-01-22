@@ -28,7 +28,7 @@ public class PreOrderIterativeWay {
         stack.push(root);
         while (!stack.empty()) {
             TreeNode node = stack.pop();
-            System.out.print(node.getData() +  " ");
+            System.out.print(node.data +  " ");
             if (node.right != null) {
                 stack.push(node.right);
             }
