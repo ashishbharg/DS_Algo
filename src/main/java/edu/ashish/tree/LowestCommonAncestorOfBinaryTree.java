@@ -18,7 +18,7 @@ public class LowestCommonAncestorOfBinaryTree {
 
         TreeNode node = lowestCommonAncestorOfBinaryTree(root, node1, node2);
 
-        System.out.println("Lowest Common Ancestor of Binary Tree is " + node.getData());
+        System.out.println("Lowest Common Ancestor of Binary Tree is " + node.data);
 
     }
 
@@ -28,9 +28,9 @@ public class LowestCommonAncestorOfBinaryTree {
             return null;
         }
 
-        if (root.getData() == node1.getData() ||
-                root.getData() == node2.getData()) {
-            System.out.println(root.getData());
+        if (root.data == node1.data ||
+                root.data == node2.data) {
+            System.out.println(root.data);
             return root;
         }
 
