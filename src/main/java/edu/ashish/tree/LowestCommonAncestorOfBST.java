@@ -30,7 +30,7 @@ public class LowestCommonAncestorOfBST {
         if (lowestCommonAncestor == null) {
             System.out.println("Tree doesn't have any nodes");
         } else {
-            System.out.println("Lowest Common Ancestor is " + lowestCommonAncestor.getData());
+            System.out.println("Lowest Common Ancestor is " + lowestCommonAncestor.data);
         }
     }
 
@@ -40,9 +40,9 @@ public class LowestCommonAncestorOfBST {
             return null;
         }
 
-        if (node1.getData() < root.getData() && node2.getData() < root.getData()) {
+        if (node1.data < root.data && node2.data < root.data) {
             return lowestCommonAncestorOfBST(root.left, node1, node2);
-        } else if (node1.getData() > root.getData() && node2.getData() > root.getData()) {
+        } else if (node1.data > root.data && node2.data > root.data) {
             return lowestCommonAncestorOfBST(root.right, node1, node2);
         } else {
             return root;
