@@ -38,14 +38,14 @@ public class LargestBSTInBinaryTree {
         NodeData nodeData = new NodeData();
 
         if(root.left == null) {
-            leftNodeData.max = root.getData();
+            leftNodeData.max = root.data;
         }
 
         if (root.right == null) {
-            rightNodeData.min = root.getData();
+            rightNodeData.min = root.data;
         }
         if (leftNodeData.isBST == false || rightNodeData.isBST == false
-                || (leftNodeData.max > root.getData() || rightNodeData.min < root.getData())) {
+                || (leftNodeData.max > root.data || rightNodeData.min < root.data)) {
             nodeData.isBST = false;
             nodeData.size = Math.max(leftNodeData.size, rightNodeData.size);
             return nodeData;
@@ -53,8 +53,8 @@ public class LargestBSTInBinaryTree {
 
         nodeData.isBST = true;
         nodeData.size = leftNodeData.size + rightNodeData.size + 1;
-        nodeData.min = root.left != null ? leftNodeData.min : root.getData();
-        nodeData.max = root.right != null ? rightNodeData.max : root.getData();
+        nodeData.min = root.left != null ? leftNodeData.min : root.data;
+        nodeData.max = root.right != null ? rightNodeData.max : root.data;
 
         return nodeData;
     }
