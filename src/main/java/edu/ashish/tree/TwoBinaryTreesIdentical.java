@@ -16,7 +16,7 @@ public class TwoBinaryTreesIdentical {
         boolean areTwoTreesIdentical = areTwoBinaryTreesIdentical(root1, root2);
         print(areTwoTreesIdentical);
 
-        root2 = InsertionInBST.insertInBST(root2, 100);
+        root2 = BinarySearchTree.insertInBST(root2, 100);
         areTwoTreesIdentical = areTwoBinaryTreesIdentical(root1, root2);
         print(areTwoTreesIdentical);
     }
@@ -39,7 +39,7 @@ public class TwoBinaryTreesIdentical {
             return false;
         }
 
-        return root1.getData() == root2.getData() &&
+        return root1.data == root2.data &&
                 areTwoBinaryTreesIdentical(root1.left, root2.left) &&
                 areTwoBinaryTreesIdentical(root1.right, root2.right);
     }
