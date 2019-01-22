@@ -40,7 +40,7 @@ public class OrderTraversals {
 
         while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
-            System.out.print(node.getData() + " ");
+            System.out.print(node.data + " ");
             if (node.left != null) {
                 queue.add(node.left);
             }
@@ -68,7 +68,7 @@ public class OrderTraversals {
             return;
         }
         if (height == 1) {
-            System.out.print(root.getData() + " ");
+            System.out.print(root.data + " ");
         } else {
             levelOrder(root.left, height - 1);
             levelOrder(root.right, height - 1);
@@ -91,7 +91,7 @@ public class OrderTraversals {
         if(root != null) {
             postOrder(root.left);
             postOrder(root.right);
-            System.out.print(root.getData() + "  ");
+            System.out.print(root.data + "  ");
         }
     }
 
@@ -99,7 +99,7 @@ public class OrderTraversals {
 
         if(root != null) {
             inOrder(root.left);
-            System.out.print(root.getData() + "  ");
+            System.out.print(root.data + "  ");
             inOrder(root.right);
         }
     }
@@ -107,7 +107,7 @@ public class OrderTraversals {
     private static void preOrder(TreeNode root) {
 
         if (root != null) {
-            System.out.print(root.getData() + "  ");
+            System.out.print(root.data + "  ");
             preOrder(root.left);
             preOrder(root.right);
         }
