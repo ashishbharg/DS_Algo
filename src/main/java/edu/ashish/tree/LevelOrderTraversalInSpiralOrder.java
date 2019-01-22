@@ -26,7 +26,7 @@ public class LevelOrderTraversalInSpiralOrder {
         while (!stack1.empty() || !stack2.empty()) {
             while (!stack1.empty()) {
                 TreeNode node = stack1.pop();
-                System.out.print(node.getData() + " ");
+                System.out.print(node.data + " ");
                 if (node.left != null) {
                     stack2.push(node.left);
                 }
@@ -37,7 +37,7 @@ public class LevelOrderTraversalInSpiralOrder {
 
             while (!stack2.empty()) {
                 TreeNode node = stack2.pop();
-                System.out.print(node.getData() + " ");
+                System.out.print(node.data + " ");
                 if (node.right != null) {
                     stack1.push(node.right);
                 }
