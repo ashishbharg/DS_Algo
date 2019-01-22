@@ -40,10 +40,10 @@ public class PostOrderIterativeWay {
                 TreeNode temp = stack.peek().right;
                 if (temp == null) {
                     temp = stack.pop();
-                    System.out.print(temp.getData() + " ");
+                    System.out.print(temp.data + " ");
                     while (!stack.isEmpty() && temp == stack.peek().right) {
                         temp = stack.pop();
-                        System.out.print(temp.getData() + " ");
+                        System.out.print(temp.data + " ");
                     }
                 } else {
                     current = temp;
@@ -75,7 +75,7 @@ public class PostOrderIterativeWay {
         }
 
         while (!stack2.empty()) {
-            System.out.print(stack2.pop().getData() + " ");
+            System.out.print(stack2.pop().data + " ");
         }
     }
 }
