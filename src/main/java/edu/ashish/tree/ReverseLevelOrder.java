@@ -37,7 +37,7 @@ public class ReverseLevelOrder {
         }
 
         while (!stack.empty()) {
-            System.out.print(stack.pop().getData() + " ");
+            System.out.print(stack.pop().data + " ");
         }
     }
 }
