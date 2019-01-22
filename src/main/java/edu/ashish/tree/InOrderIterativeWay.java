@@ -36,7 +36,7 @@ public class InOrderIterativeWay {
                     break;
                 }
                 root = stack.pop();
-                System.out.print(root.getData() + " ");
+                System.out.print(root.data + " ");
                 root = root.right;
             }
         }
