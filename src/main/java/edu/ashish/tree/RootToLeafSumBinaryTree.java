@@ -34,19 +34,19 @@ public class RootToLeafSumBinaryTree {
         }
 
         if (root.left == null && root.right == null) {
-            if (root.getData() == sum) {
-                result.add(root.getData());
+            if (root.data == sum) {
+                result.add(root.data);
                 return true;
             }
             return false;
         }
 
-        if(findBranchContainingSum(root.left, sum - root.getData(), result)) {
-            result.add(root.getData());
+        if(findBranchContainingSum(root.left, sum - root.data, result)) {
+            result.add(root.data);
             return true;
         }
-        if (findBranchContainingSum(root.right, sum - root.getData(), result)) {
-           result.add(root.getData());
+        if (findBranchContainingSum(root.right, sum - root.data, result)) {
+           result.add(root.data);
            return true;
         }
 
