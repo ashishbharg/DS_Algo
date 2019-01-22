@@ -27,12 +27,12 @@ public class IsBinaryTreeBST {
             return true;
         }
 
-        if(root.getData() <= min || root.getData() > max) {
+        if(root.data <= min || root.data > max) {
             return false;
         }
 
-        return isBinaryBST(root.left, min, root.getData()) &&
-                isBinaryBST(root.right, root.getData(), max);
+        return isBinaryBST(root.left, min, root.data) &&
+                isBinaryBST(root.right, root.data, max);
     }
 
     private static void print(boolean isBinaryBST) {
