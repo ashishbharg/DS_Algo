@@ -1,5 +1,6 @@
 package edu.ashish.util;
 
+import edu.ashish.model.BalanceTreeNode;
 import edu.ashish.model.TreeNode;
 
 public class PrintingUtil {
@@ -15,11 +16,45 @@ public class PrintingUtil {
     public static void printTree(TreeNode root) {
 
         int height = heightOfTree(root);
-        for (int i=1; i < height; i++) {
+        for (int i=1; i <= height; i++) {
             printTree(root, i);
             System.out.println();
         }
 
+    }
+
+    public static void printBalanceTree(BalanceTreeNode root) {
+
+        int height = heightOfBalanceTree(root);
+        for (int i=1; i <= height; i++) {
+            printBalanceTree(root, i);
+            System.out.println();
+        }
+
+    }
+
+    private static void printBalanceTree(BalanceTreeNode root, int height) {
+        if(root == null) {
+            return;
+        }
+
+        if (height == 1) {
+            System.out.print(root.data + "\t");
+        } else {
+            printBalanceTree(root.left, height - 1);
+            printBalanceTree(root.right, height - 1);
+        }
+    }
+
+    private static int heightOfBalanceTree(BalanceTreeNode root) {
+
+        if (root == null) {
+            return 0;
+        }
+
+        int lHeight = heightOfBalanceTree(root.left);
+        int rHeight = heightOfBalanceTree(root.right);
+        return 1 + Integer.max(lHeight, rHeight);
     }
 
     private static void printTree(TreeNode root, int height) {
@@ -28,7 +63,7 @@ public class PrintingUtil {
         }
 
         if (height == 1) {
-            System.out.print(root.getData() + "\t");
+            System.out.print(root.data + "\t");
         } else {
             printTree(root.left, height - 1);
             printTree(root.right, height - 1);
