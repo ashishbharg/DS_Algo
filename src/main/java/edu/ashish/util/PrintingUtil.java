@@ -7,6 +7,7 @@ public class PrintingUtil {
 
     public static void print1DArray(int[] arr) {
 
+        System.out.println("Printing array");
         for(int num: arr) {
             System.out.print(num + " ");
         }
@@ -79,5 +80,15 @@ public class PrintingUtil {
         int lHeight = heightOfTree(root.left);
         int rHeight = heightOfTree(root.right);
         return 1 + Integer.max(lHeight, rHeight);
+    }
+
+    public static void print2DArray(int[][] arr) {
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[0].length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
