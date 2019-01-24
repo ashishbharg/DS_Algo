@@ -7,9 +7,24 @@ public class PrintingUtil {
 
     public static void print1DArray(int[] arr) {
 
-        System.out.println("Printing array");
         for(int num: arr) {
             System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+
+    public static void print1DArray(double[] arr) {
+
+        for(double num: arr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+
+    public static void print1DArray(String[] arr) {
+
+        for(String str: arr) {
+            System.out.print(str + " ");
         }
         System.out.println();
     }
