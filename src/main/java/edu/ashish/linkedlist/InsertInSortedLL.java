@@ -13,7 +13,7 @@ public class InsertInSortedLL {
 
         ListSinglePointerNode head = DSCreationUtil.createSortedSinglyLinkedList(1, 3, 5, 7, 8, 9);
         ListSinglePointerNode.printList(head);
-        ListSinglePointerNode newNode = new ListSinglePointerNode(6);
+        ListSinglePointerNode newNode = new ListSinglePointerNode(10);
         head = insertInSortedLL(newNode, head);
         ListSinglePointerNode.printList(head);
     }
@@ -21,13 +21,19 @@ public class InsertInSortedLL {
     private static ListSinglePointerNode insertInSortedLL(ListSinglePointerNode newNode, ListSinglePointerNode head) {
 
         ListSinglePointerNode currentNode = head;
-        ListSinglePointerNode prevNode = head;
+        ListSinglePointerNode prevNode = null;
         while(currentNode != null && currentNode.getData() < newNode.getData()) {
             prevNode = currentNode;
             currentNode = currentNode.getNext();
         }
-        newNode.setNext(prevNode.getNext());
-        prevNode.setNext(newNode);
+        if (prevNode == null) {
+            newNode.setNext(currentNode);
+            head = newNode;
+        } else {
+            newNode.setNext(prevNode.getNext());
+            prevNode.setNext(newNode);
+
+        }
         return head;
     }
 }
