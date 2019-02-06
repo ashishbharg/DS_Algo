@@ -50,6 +50,10 @@ public class DSCreationUtil {
         node3.setNext(node4);
         ListSinglePointerNode node5 = new ListSinglePointerNode(9);
         node4.setNext(node5);
+        ListSinglePointerNode node6 = new ListSinglePointerNode(4);
+        node5.setNext(node6);
+        ListSinglePointerNode node7 = new ListSinglePointerNode(6);
+        node6.setNext(node7);
         return head;
     }
 

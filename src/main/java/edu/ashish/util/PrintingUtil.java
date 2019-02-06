@@ -3,29 +3,35 @@ package edu.ashish.util;
 import edu.ashish.model.BalanceTreeNode;
 import edu.ashish.model.TreeNode;
 
+import java.util.Arrays;
+
 public class PrintingUtil {
 
     public static void print1DArray(int[] arr) {
 
-        for(int num: arr) {
-            System.out.print(num + " ");
-        }
+        System.out.println("Array after sorting");
+        System.out.println(Arrays.toString(arr));
         System.out.println();
     }
 
     public static void print1DArray(double[] arr) {
 
-        for(double num: arr) {
-            System.out.print(num + " ");
-        }
+        System.out.println("Array after sorting");
+        System.out.println(Arrays.toString(arr));
         System.out.println();
     }
 
     public static void print1DArray(String[] arr) {
 
-        for(String str: arr) {
-            System.out.print(str + " ");
-        }
+        System.out.println("Array after sorting");
+        System.out.println(Arrays.toString(arr));
+        System.out.println();
+    }
+
+    public static void print1DArray(Object[] arr) {
+
+        System.out.println("Array after sorting objects");
+        System.out.println(Arrays.toString(arr));
         System.out.println();
     }
 
