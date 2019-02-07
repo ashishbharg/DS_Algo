@@ -9,28 +9,24 @@ public class PrintingUtil {
 
     public static void print1DArray(int[] arr) {
 
-        System.out.println("Array after sorting");
         System.out.println(Arrays.toString(arr));
         System.out.println();
     }
 
     public static void print1DArray(double[] arr) {
 
-        System.out.println("Array after sorting");
         System.out.println(Arrays.toString(arr));
         System.out.println();
     }
 
     public static void print1DArray(String[] arr) {
 
-        System.out.println("Array after sorting");
         System.out.println(Arrays.toString(arr));
         System.out.println();
     }
 
     public static void print1DArray(Object[] arr) {
 
-        System.out.println("Array after sorting objects");
         System.out.println(Arrays.toString(arr));
         System.out.println();
     }
