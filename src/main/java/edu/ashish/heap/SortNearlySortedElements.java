@@ -14,6 +14,7 @@ public class SortNearlySortedElements {
     public static void main(String[] args) {
 
         int[] arr = {6, 5, 3, 2, 8, 10, 9, 15, 17, 13, 11};
+
         int k = 3;
 
         System.out.println("Before sorting");
@@ -30,6 +31,9 @@ public class SortNearlySortedElements {
 
         // Step 1. Create min heap of k + 1 elements
         for (int i = 0; i <= k; i++) {
+            if (k == arr.length && i == k) {
+                break;
+            }
             N = insertInHeap(arr[i], aux, N);
         }
 
@@ -41,7 +45,14 @@ public class SortNearlySortedElements {
         }
 
         // Get the remaining element from auxiliary array and put it in the original array.
-        for (int i = 0, j = arr.length - k - 1; i < aux.length; i++, j++) {
+        int j = arr.length - k - 1;
+        if (k == arr.length) {
+            j = 0;
+        }
+        for (int i = 0; i < aux.length; i++, j++) {
+            if (k == arr.length && i == k) {
+                break;
+            }
             N = deleteMin(arr, aux, N, j);
         }
 
