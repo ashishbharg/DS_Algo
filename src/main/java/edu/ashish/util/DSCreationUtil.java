@@ -1,8 +1,8 @@
 package edu.ashish.util;
 
+import edu.ashish.model.GraphNode;
 import edu.ashish.model.ListSinglePointerNode;
 import edu.ashish.model.TreeNode;
-import sun.reflect.generics.tree.Tree;
 
 public class DSCreationUtil {
 
@@ -82,5 +82,17 @@ public class DSCreationUtil {
         root.right.right = new TreeNode(50);
         root.right.right.right = new TreeNode(60);
         return root;
+    }
+
+    public static GraphNode createDAG() {
+        GraphNode graphNode = new GraphNode(7);
+        graphNode.addEdge(0, 2);
+        graphNode.addEdge(1, 2);
+        graphNode.addEdge(1, 4);
+        graphNode.addEdge(2, 3);
+        graphNode.addEdge(3, 5);
+        graphNode.addEdge(4, 5);
+        graphNode.addEdge(5, 6);
+        return graphNode;
     }
 }
