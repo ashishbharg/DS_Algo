@@ -31,6 +31,13 @@ public class PrintingUtil {
         System.out.println();
     }
 
+    public static void print1DArray(char[] characters) {
+        for (int i = 0; i < characters.length; i++) {
+            System.out.print(characters[i]);
+        }
+        System.out.println();
+    }
+
     public static void printTree(TreeNode root) {
 
         int height = heightOfTree(root);
